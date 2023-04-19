@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from 'prop-types'
 
 export const AddCategory = ({onNewCategory}) => {
   const [inputValue, setInputValue] = useState("");
@@ -25,3 +26,7 @@ export const AddCategory = ({onNewCategory}) => {
   );
 };
 /* podemos poner los valores de nuestras propiedades como se ve en las formas 1 y 2 ya que en este ejemplo se espera por default un evento. ambas funcionan dejandolo explicito como en la forma 1 o implicito como en la forma 2 */
+
+AddCategory.propTypes = {
+  onNewCategory: PropTypes.func
+};
